@@ -20,6 +20,11 @@ public class Tree : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if rake shed
+    }
+
     private void shed()
     {
         for(int i = 0; i < bushes.Length; i++)
