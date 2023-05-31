@@ -357,8 +357,8 @@
 "Assets/scripts/player.cs"
 "Assets/scripts/PlayerController.cs"
 "Assets/scripts/RakeUse.cs"
+"Assets/scripts/ScoreZone.cs"
 "Assets/scripts/SpawnLeaves.cs"
-"Assets/scripts/UseRake.cs"
 "Assets/Tree.cs"
 -langversion:9.0
 
