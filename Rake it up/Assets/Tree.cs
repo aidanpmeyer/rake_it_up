@@ -22,7 +22,7 @@ public class Tree : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //if rake shed
+        Debug.Log(collision.gameObject.tag);
     }
 
     private void shed()
