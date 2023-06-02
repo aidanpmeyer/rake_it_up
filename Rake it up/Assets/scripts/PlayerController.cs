@@ -17,13 +17,13 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
     bool isGrounded;
 
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0) {
             velocity.y = -2f;
-            Debug.Log("Velocity Reset");
         }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -33,4 +33,15 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public void DisableController() {
+        GetComponent<CharacterController>().enabled = false;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
 }
+
+

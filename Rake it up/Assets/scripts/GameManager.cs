@@ -26,10 +26,28 @@ public class GameManager : MonoBehaviour
     public string winScreen;
     public string loseScreen;
 
+    public Transform Nikki;
+    public PlayerController Player;
+
+    public Camera NikkiCam;
+    public Camera ThirdPerson;
+    public Camera FirstPerson;
+
+    public float NikkiTime = 2;
+    public float ThirdTime = 4;
+    public float NikkiSpeed = 50;
+
     private void Awake()
     {
         timeRemaining = levelTime;
         isTimerRunning = true;
+
+        NikkiCam.gameObject.SetActive(false);
+        ThirdPerson.gameObject.SetActive(false);
+        FirstPerson.gameObject.SetActive(true);
+
+        Nikki.gameObject.SetActive(false);
+
         //singleton nonsense
         if (instance == null)
         {
@@ -98,9 +116,34 @@ public class GameManager : MonoBehaviour
         else if (timeRemaining <= 0f)
         {
             // Load lose screen
-            SceneManager.LoadScene(loseScreen);
+            StartCoroutine(LoseSequence());
         }
     }
 
+    private System.Collections.IEnumerator LoseSequence() {
+
+        Player.DisableController();
+        Player.gameObject.AddComponent<Rigidbody>();
+        Nikki.gameObject.SetActive(true);
+
+        Nikki.position = Player.GetPosition() + new Vector3(-120f, 0f, 0f);
+
+        Nikki.GetComponent<Rigidbody>().velocity = new Vector3(NikkiSpeed, 0, 0);
+
+        FirstPerson.gameObject.SetActive(false);
+        ThirdPerson.gameObject.SetActive(false);
+        NikkiCam.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(NikkiTime);
+
+        FirstPerson.gameObject.SetActive(false);
+        NikkiCam.gameObject.SetActive(false);
+        ThirdPerson.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(ThirdTime);
+
+
+        SceneManager.LoadScene(loseScreen);
+    }
 }
 
