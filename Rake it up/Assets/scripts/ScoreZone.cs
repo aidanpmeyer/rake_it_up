@@ -13,12 +13,10 @@ public class ScoreZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger");
         if (other.CompareTag(targetTag))
         {
             numLeaves++;
             UpdateScoreText();
-            Debug.Log("leaf enter");
         }
     }
 

@@ -352,6 +352,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/scripts/Blower.cs"
 "Assets/scripts/buffer of leaves.cs"
 "Assets/scripts/GameManager.cs"
 "Assets/scripts/LookAround.cs"
@@ -360,6 +361,7 @@
 "Assets/scripts/RakeUse.cs"
 "Assets/scripts/ScoreZone.cs"
 "Assets/scripts/SpawnLeaves.cs"
+"Assets/scripts/WindArea.cs"
 "Assets/Tree.cs"
 -langversion:9.0
 

@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
         Player.gameObject.AddComponent<Rigidbody>();
         Nikki.gameObject.SetActive(true);
 
-        Nikki.position = Player.GetPosition() + new Vector3(-120f, 0f, 0f);
+        Nikki.position = new Vector3(Player.GetPosition().x - 150f, 0f, Player.GetPosition().z);
 
         Nikki.GetComponent<Rigidbody>().velocity = new Vector3(NikkiSpeed, 0, 0);
 
@@ -142,7 +142,10 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(ThirdTime);
 
-
+        if(loseScreen == SceneManager.GetActiveScene().name)
+        {
+            Awake();
+        }
         SceneManager.LoadScene(loseScreen);
     }
 }
