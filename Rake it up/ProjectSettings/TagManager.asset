@@ -10,13 +10,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - leaf
   - Water
   - UI
-  - 
+  - car
   - Ground
-  - 
-  - 
+  - Barrier
+  - Player
   - 
   - 
   - 

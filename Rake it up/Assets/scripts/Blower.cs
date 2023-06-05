@@ -28,6 +28,7 @@ public class Blower : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            this.GetComponent<AudioSource>().Play();
             WindAreaCollider.SetActive(true);
             if (isRotating)
             {
@@ -38,6 +39,7 @@ public class Blower : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            this.GetComponent<AudioSource>().Stop();
             WindAreaCollider.SetActive(false);
             if (isRotating)
             {

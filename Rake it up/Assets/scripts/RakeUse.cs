@@ -11,6 +11,7 @@ public class RakeUse : MonoBehaviour
     public float forwardDuration = 2f;
     public float backwardDuration = 2f;
     private bool isRotating = false;
+    public bool inUse = false;
 
     private Quaternion originalRotation;
     private Quaternion startRotation;
@@ -25,6 +26,7 @@ public class RakeUse : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            inUse = true;
             if (isRotating)
             {
                 StopAllCoroutines();
@@ -34,6 +36,7 @@ public class RakeUse : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0)) 
         {
+            inUse = false;
             if (isRotating) {
                 StopAllCoroutines();
             }

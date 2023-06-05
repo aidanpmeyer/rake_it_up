@@ -6,23 +6,25 @@ public class Tree : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] bushes;
+    private AudioSource rakeSound;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if (FindObjectOfType<GameManager>().autoFall) {
             shed();
         }
-        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log(collision.gameObject.tag);
+        Debug.Log("rahhhhh");
+        if (other.CompareTag("rake")) {
+            if (other.gameObject.GetComponent<RakeUse>().inUse)
+            {
+                rakeSound = other.GetComponent<AudioSource>();
+                rakeSound.Play();
+                shed();
+            }
+        }
     }
 
     private void shed()

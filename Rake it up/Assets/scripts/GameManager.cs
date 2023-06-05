@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public float NikkiTime = 2;
     public float ThirdTime = 4;
     public float NikkiSpeed = 50;
+    public bool autoFall = false;
 
     private void Awake()
     {

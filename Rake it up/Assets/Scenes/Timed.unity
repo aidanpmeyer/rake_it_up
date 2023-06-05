@@ -2043,24 +2043,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33a0d705633a20944873bbbc7cbec846, type: 3}
   m_PrefabInstance: {fileID: 209941720}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1157353533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4093318322249548739, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
-  m_PrefabInstance: {fileID: 3751228569300423828}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1157353537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157353533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 890664514d542984e9ca502ec2e021ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bushes: []
 --- !u!1001 &1178853836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7974,6 +7956,120 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a0d705633a20944873bbbc7cbec846, type: 3}
+--- !u!1 &1645596101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1432481402331683911, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
+  m_PrefabInstance: {fileID: 1786425121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1645596104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645596101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.059704, y: 1.8463525, z: 2.3175244}
+  m_Center: {x: 0.95702356, y: -5.714154, z: -1.1541436}
+--- !u!82 &1645596105
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645596101}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 45e0bb0cf8cd70049a716ffabc1b7962, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1666670521
 GameObject:
   m_ObjectHideFlags: 0
@@ -8397,9 +8493,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1432481401513617938, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1432481401599785064, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432481401599785064, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1432481401599785066, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
       propertyPath: m_RootOrder
@@ -8444,6 +8548,14 @@ PrefabInstance:
     - target: {fileID: 1432481401599785066, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432481402331683911, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
+      propertyPath: m_TagString
+      value: rake
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242893696570527641, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
+      propertyPath: m_TagString
+      value: rake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b8c7dacc74eb8f4cb5a21ee319a9568, type: 3}
@@ -8842,6 +8954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955561883872151822, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
+      propertyPath: rakeSound
+      value: 
+      objectReference: {fileID: 1645596105}
     - target: {fileID: 3751228569594996476, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
       propertyPath: m_Name
       value: tree (1)
@@ -8888,6 +9004,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751228569594996477, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663118022565253309, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9664,6 +9784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955561883872151822, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
+      propertyPath: rakeSound
+      value: 
+      objectReference: {fileID: 1645596105}
     - target: {fileID: 3751228569594996476, guid: 31f7f3f2f9c7a774c9910822500fc08d, type: 3}
       propertyPath: m_Name
       value: tree
