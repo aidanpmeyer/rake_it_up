@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     public float height = 20;
     private Vector3 offset; // The initial offset between the camera and the target
     private float currentAngle; // The current angle of rotation
+    
 
     private void Start()
     {

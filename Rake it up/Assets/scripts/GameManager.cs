@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-       
+        roundStarted = false;
         timeRemaining = levelTime;
         isTimerRunning = true;
 
@@ -131,6 +131,7 @@ public class GameManager : MonoBehaviour
         if (score >= winThresh)
         {
             // Load win screen
+            Awake();
             SceneManager.LoadScene(winScreen);
         }
         else if (timeRemaining <= 0f)

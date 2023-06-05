@@ -7,7 +7,7 @@ public class Tree : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] bushes;
     private AudioSource rakeSound;
-    void Start()
+    void Update()
     {
         if (FindObjectOfType<GameManager>().autoFall && FindObjectOfType<GameManager>().roundStarted) {
             shed();
