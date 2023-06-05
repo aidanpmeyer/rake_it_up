@@ -37,15 +37,25 @@ public class GameManager : MonoBehaviour
     public float ThirdTime = 4;
     public float NikkiSpeed = 50;
     public bool autoFall = false;
+    public bool roundStarted = false;
+
+    public GameObject Title;
+    public GameObject UI;
+
+    public Camera rotatingCam;
 
     private void Awake()
     {
+       
         timeRemaining = levelTime;
         isTimerRunning = true;
 
+        Title.SetActive(true);
+        UI.SetActive(false);
         NikkiCam.gameObject.SetActive(false);
         ThirdPerson.gameObject.SetActive(false);
-        FirstPerson.gameObject.SetActive(true);
+        FirstPerson.gameObject.SetActive(false);
+        rotatingCam.gameObject.SetActive(true);
 
         Nikki.gameObject.SetActive(false);
 
@@ -66,7 +76,16 @@ public class GameManager : MonoBehaviour
     //once per frame
     private void Update()
     {
-        if (isTimerRunning)
+        if (!roundStarted && Input.GetKeyDown(KeyCode.Space))
+        {
+            roundStarted = true;
+            FirstPerson.gameObject.SetActive(true);
+            rotatingCam.gameObject.SetActive(false);
+            Title.SetActive(false);
+            UI.SetActive(true);
+
+        }
+        if (roundStarted && isTimerRunning)
         {
             timeRemaining -= Time.deltaTime;
 

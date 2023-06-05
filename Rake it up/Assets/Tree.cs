@@ -9,7 +9,7 @@ public class Tree : MonoBehaviour
     private AudioSource rakeSound;
     void Start()
     {
-        if (FindObjectOfType<GameManager>().autoFall) {
+        if (FindObjectOfType<GameManager>().autoFall && FindObjectOfType<GameManager>().roundStarted) {
             shed();
         }
     }

@@ -20,6 +20,7 @@ public class Nicki : MonoBehaviour
     {
         // Get the Animator component attached to the same GameObject
         animator = GetComponent<Animator>();
+        animator.SetTrigger("Run");
         noise = GetComponent<AudioSource>();
 
         SetRandomMoveSpeed();
@@ -46,7 +47,6 @@ public class Nicki : MonoBehaviour
         {
             ChangeDirection();
             changeDirectionTime = GetRandomChangeDirectionTime();
-            animator.Play("Run",0, changeDirectionTime);
             CallFunctionOnDirectionChange();
         }
         //LoopCurrentAnimation();
@@ -55,7 +55,6 @@ public class Nicki : MonoBehaviour
 
     private void ChangeDirection()
     {
-        
         noise.PlayOneShot(phrases[(int)Random.Range(0, phrases.Length)]);
         SetRandomTargetDirection();
         SetRandomMoveSpeed();
