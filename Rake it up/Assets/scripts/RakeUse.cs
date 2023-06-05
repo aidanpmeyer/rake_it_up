@@ -13,6 +13,9 @@ public class RakeUse : MonoBehaviour
     private bool isRotating = false;
     public bool inUse = false;
 
+    public Transform player;
+    public float yoffsetMult = 3f;
+
     private Quaternion originalRotation;
     private Quaternion startRotation;
     void Start()
@@ -47,7 +50,7 @@ public class RakeUse : MonoBehaviour
     private System.Collections.IEnumerator RotateForward()
     {
         isRotating = true;
-        Quaternion targetForward = Quaternion.Euler(new Vector3(downAngle, yAngle, 0f));
+        Quaternion targetForward = Quaternion.Euler(new Vector3(downAngle - player.position.y * yoffsetMult, yAngle, 0f));
         startRotation = transform.localRotation;
 
         float t = 0f;

@@ -16,6 +16,7 @@ public class ScoreZone : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             numLeaves++;
+            FindObjectOfType<GameManager>().UpdateScore(1);
             UpdateScoreText();
         }
     }
@@ -25,6 +26,7 @@ public class ScoreZone : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             numLeaves--;
+            FindObjectOfType<GameManager>().UpdateScore(-1);
             UpdateScoreText();
             Debug.Log("leaf exit");
         }

@@ -76,6 +76,11 @@ public class GameManager : MonoBehaviour
     //once per frame
     private void Update()
     {
+        if (timeRemaining > 0f) {
+            
+            CheckScore(); 
+        }
+
         if (!roundStarted && Input.GetKeyDown(KeyCode.Space))
         {
             roundStarted = true;
@@ -159,7 +164,7 @@ public class GameManager : MonoBehaviour
 
         FirstPerson.gameObject.SetActive(false);
         NikkiCam.gameObject.SetActive(false);
-        ThirdPerson.gameObject.SetActive(true);
+        rotatingCam.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(ThirdTime);
 
